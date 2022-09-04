@@ -13,10 +13,11 @@ const Skill = () => {
 
   const [experiences, setExperience] = useState([
     {
-      year: 2020, works: [
+      year: "2020 - Present", works: [
         { name: 'FrontEnd Developer', company: 'Flave Technologies', desc: 'I am as a Frontend Developer as Flave Technologies' },
       ]
-    }]);
+    },
+  ]);
   const [skills, setSkills] = useState([
     { name: 'Javascript', bgColor: '#edf2f8', imgUrl: images.javascript, icon: AiFillEye, },
     { name: 'ReactJS', bgColor: '#edf2f8', imgUrl: images.react, icon: AiFillEye, },
@@ -31,9 +32,9 @@ const Skill = () => {
       <h2 className='head-text'>Skills and Experiences.</h2>
       <div className='app__skills-container'>
         <motion.div className='app__skills-list'>
-          {skills.map((skill, index) => (
+          {skills.map((skill, idx) => (
             <motion.div
-              key={index}
+              key={idx}
               whileInView={{ opacity: [0, 1] }}
               transition={{ duration: 0.5 }}
               className='app__skills-item app__flex'
@@ -47,9 +48,9 @@ const Skill = () => {
           ))}
         </motion.div>
         <div className="app__skills-exp">
-          {experiences.map((experience, index) => (
+          {experiences.map((experience, idx) => (
             <motion.div
-              key={index}
+              key={idx}
               className="app__skills-exp-item"
 
             >
